@@ -13,7 +13,7 @@ namespace CadastroPessoas
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.UseMySQL(configuration.GetConnectionString("DefaultConnection"));
             });
         }
 
